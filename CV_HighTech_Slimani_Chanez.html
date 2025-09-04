@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV – Slimani Chanez</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#121a32;
+      --panel:#0e1429;
+      --text:#e6edf7;
+      --muted:#444;          /* gris foncé pour être visible sur fond blanc */
+      --brand:#4cc9f0;
+      --brand-2:#64f;
+      --ok:#22c55e;
+      --mid:#eab308;
+      --low:#ef4444;
+      --chip:#1f2b4d;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;}
+    .page{max-width:1050px;margin:28px auto;padding:20px}
+    .cv{display:grid;grid-template-columns:340px 1fr;gap:0;background:var(--card);border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+    .left{background:linear-gradient(180deg,rgba(76,201,240,.08),transparent 40%), var(--panel);padding:28px;color:var(--text)}
+    .avatar{width:160px;height:160px;border-radius:50%;margin:6px auto 16px;border:5px solid var(--brand);background:linear-gradient(135deg, #1a2549, #0b122a);display:grid;place-items:center;overflow:hidden}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .placeholder{font-size:12px;color:var(--muted);text-align:center}
+    .name{font-size:26px;font-weight:800;text-align:center;margin:8px 0 2px;color:#a5f3fc;letter-spacing:.3px}
+    .role{font-size:14px;text-align:center;color:#cbd5e1;margin-bottom:14px}
+    .block{margin:18px 0}
+    .block h4{margin:0 0 10px;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#a5b4fc}
+    .contact{display:grid;gap:10px}
+    .contact-item{display:grid;grid-template-columns:22px 1fr;gap:10px;align-items:start}
+    .contact-item span{font-size:14px;color:#cbd5e1}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:var(--chip);color:#cfe2ff;font-size:12px;margin:4px 6px 0 0}
+
+    /* Right panel blanc */
+    .right{padding:30px 32px;background:#fff;color:#000}
+    .header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+    .title{font-size:28px;font-weight:800;color:#0ea5e9}
+    .print-btn{border:0;padding:10px 14px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:white;font-weight:700;cursor:pointer}
+    .section{margin:22px 0;color:#000}
+    .section h3{margin:0 0 10px;padding-bottom:8px;border-bottom:2px solid rgba(124, 58, 237,.35);font-size:16px;text-transform:uppercase;letter-spacing:.12em;color:#1e293b}
+    .row{display:grid;grid-template-columns:1fr auto;gap:16px}
+    .muted{color:#444}
+    .item{margin:12px 0;padding:12px;border-radius:12px;background:#f8fafc;border:1px solid #e2e8f0;color:#000}
+    .item .top{display:flex;justify-content:space-between;gap:12px}
+    .item .top b{font-size:15px;color:#000}
+    .lang{margin:12px 0}
+    .lang .label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:6px;color:#000}
+    .bar{height:10px;border-radius:999px;background:#e2e8f0;overflow:hidden}
+    .bar .fill{height:100%;border-radius:999px}
+    .lvl-exp .fill{background:var(--ok)}
+    .lvl-ind .fill{background:var(--mid)}
+    .lvl-elm .fill{background:var(--low)}
+
+    @media print{
+      * {-webkit-print-color-adjust: exact !important; print-color-adjust: exact !important;}
+      .right{background:#fff !important;color:#000 !important}
+      .muted{color:#444 !important}
+      .page{margin:0;padding:0}
+      .cv{box-shadow:none;border-radius:0}
+      .print-btn{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="cv">
+      <aside class="left">
+        <div class="avatar"><span class="placeholder">Photo<br/>160×160</span></div>
+        <div class="name">SLIMANI Chanez</div>
+        <div class="role">Étudiante en Informatique</div>
+        <div class="block">
+          <h4>Contact</h4>
+          <div class="contact">
+            <div class="contact-item">📍 <span>4 rue des Cloÿs, 75018 Paris</span></div>
+            <div class="contact-item">📞 <span>07.59.42.54.52</span></div>
+            <div class="contact-item">✉️ <span>slimanichanez2023@gmail.com</span></div>
+          </div>
+        </div>
+        <div class="block">
+          <h4>Compétences</h4>
+          <span class="chip">HTML/CSS</span>
+          <span class="chip">Fortran</span>
+          <span class="chip">Bureautique</span>
+          <span class="chip">Organisation</span>
+        </div>
+        <div class="block">
+          <h4>Centres d’intérêt</h4>
+          <span class="chip">Tech</span>
+          <span class="chip">Design</span>
+          <span class="chip">Langues</span>
+        </div>
+      </aside>
+      <main class="right">
+        <div class="header">
+          <div class="title">Curriculum Vitae</div>
+          <button class="print-btn" onclick="window.print()">Imprimer / PDF</button>
+        </div>
+        <section class="section">
+          <h3>Profil</h3>
+          <p class="muted">Étudiante motivée, organisée et curieuse, cherchant à développer des compétences en informatique et à contribuer à des projets concrets. Autonome, avec un bon esprit d’équipe.</p>
+        </section>
+        <section class="section">
+          <h3>Langues</h3>
+          <div class="lang">
+            <div class="label"><span>Arabe</span><span>Expérimenté</span></div>
+            <div class="bar lvl-exp"><div class="fill" style="width:100%"></div></div>
+          </div>
+          <div class="lang">
+            <div class="label"><span>Kabyle</span><span>Expérimenté</span></div>
+            <div class="bar lvl-exp"><div class="fill" style="width:100%"></div></div>
+          </div>
+          <div class="lang">
+            <div class="label"><span>Français</span><span>Indépendant</span></div>
+            <div class="bar lvl-ind"><div class="fill" style="width:70%"></div></div>
+          </div>
+          <div class="lang">
+            <div class="label"><span>Anglais</span><span>Indépendant</span></div>
+            <div class="bar lvl-ind"><div class="fill" style="width:70%"></div></div>
+          </div>
+        </section>
+        <section class="section">
+          <h3>Cursus</h3>
+          <div class="item">
+            <div class="top"><b>Baccalauréat (Série Mathématiques)</b><span class="muted">2024</span></div>
+            <div class="muted">Pays d’obtention : Algérie – Mention Très Bien – Diplôme : BAC</div>
+          </div>
+          <div class="item">
+            <div class="top"><b>Université Saad Dahlab</b><span class="muted">2024/2025</span></div>
+            <div class="muted">Discipline : Aéronautique – Diplôme préparé : L1</div>
+          </div>
+          <div class="item">
+            <div class="top"><b>Lycée Technicum Frères Hanouti</b><span class="muted">2023/2024</span></div>
+            <div class="muted">Discipline : Mathématiques – Diplôme obtenu : BAC</div>
+          </div>
+        </section>
+        <section class="section">
+          <h3>Formation</h3>
+          <div class="item">
+            <div class="top"><b>Université (Licence – en cours)</b><span class="muted">2025 – présent</span></div>
+            <div class="muted">Parcours Mathématique – bases en algorithmique et programmation.</div>
+          </div>
+        </section>
+        <section class="section">
+          <h3>Expériences</h3>
+          <div class="item">
+            <div class="top"><b>Bénévolat – Association locale</b><span class="muted">2024</span></div>
+            <div class="muted">Accueil, organisation d’évènements, gestion de petites tâches bureautiques.</div>
+          </div>
+        </section>
+        <section class="section">
+          <h3>Compétences clés</h3>
+          <div class="row">
+            <div>
+              <ul>
+                <li>HTML/CSS – mise en page, responsivité</li>
+                <li>Fortran – bases de la programmation</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>Suite bureautique (Docs/Sheets)</li>
+                <li>Communication, autonomie</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
